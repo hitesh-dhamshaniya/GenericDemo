@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dhl.genricdemo">
 
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".screens.AnimationActivity"
-            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".screens.TimerToastActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".screens.AccessibilityOnOffActivity" />
+        <activity
+            android:name=".screens.AnimationActivity"
+            android:screenOrientation="landscape" />
         <activity android:name=".screens.KotlinFlowActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

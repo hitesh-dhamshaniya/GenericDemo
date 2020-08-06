@@ -1,5 +1,6 @@
 package com.dhl.genricdemo.screens
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.dhl.genricdemo.R
@@ -38,7 +39,9 @@ class KotlinFlowActivity : AppCompatActivity() {
                     Log.d("SetUpClick", "Collection of $it")
                     tvEmit.text = "${tvEmit.text}\n$it"
                     if (it == 9) {
+                        setResult(Activity.RESULT_OK)
                         btnFlowCLick.isEnabled = true
+                        finish()
                     }
                 }
             }
